@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('getAllProjects', [ProjectController::class, 'getAllProjects']);
+Route::get('insertNewProject', [ProjectController::class, 'insertProject']);
+Route::get('insertThirteenProject', [ProjectController::class, 'insertThirteenProject']);
+Route::get('insertThirteenCity', [ProjectController::class, 'insertThirteenCity']);
+Route::get('insertThirteenCompany', [ProjectController::class, 'insertThirteenCompany']);
+Route::get('insertThirteenUser', [ProjectController::class, 'insertThirteenUser']);
+Route::get('updateProject', [ProjectController::class, 'updateProject']);
+Route::get('deleteProject', [ProjectController::class, 'deleteProject']);
